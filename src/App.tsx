@@ -17,7 +17,7 @@ const App = () => {
         <Nav switchTheme={switchTheme} />
         <Routes>
           <Route path='' element={<Main />} />
-          <Route path='option' element={<ChooseOption />} />
+          <Route path='option/*' element={<ChooseOption />} />
           <Route path='quiz/*' element={<Quiz />} />
         </Routes>
       </ThemeProvider>

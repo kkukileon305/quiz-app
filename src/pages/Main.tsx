@@ -29,7 +29,7 @@ const Main = () => {
   return (
     <StyledMain>
       <h1>Simple Quiz</h1>
-      <Link to='option'>Start!</Link>
+      <Link to='option/categorie'>Start!</Link>
     </StyledMain>
   );
 };

@@ -37,10 +37,10 @@ const StyledNav = styled.nav<{ menu: boolean; pathname: string }>`
     right: 20px;
     top: 100%;
     transition: 0.3s;
-    transform-origin: 50% 0;
+    transform-origin: 100% -10px;
     opacity: ${({ menu }) => (menu ? '1' : '0')};
     visibility: ${({ menu }) => (menu ? 'visible' : 'hidden')};
-    transform: translateY(${({ menu }) => (menu ? '0' : '-20px')});
+    transform: scale(${({ menu }) => (menu ? '1' : '0.5')});
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
 
     ul {

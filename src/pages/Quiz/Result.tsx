@@ -105,7 +105,7 @@ const Result = ({ quizs, correctAns, userAns }: IResult) => {
           </li>
         ))}
       </ul>
-      <Link to='/option'>Back</Link>
+      <Link to='/'>Back</Link>
     </StyledPage>
   );
 };
