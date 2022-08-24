@@ -5,7 +5,6 @@ const store = configureStore({
   reducer: {
     option: option.reducer,
   },
-  devTools: true,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
