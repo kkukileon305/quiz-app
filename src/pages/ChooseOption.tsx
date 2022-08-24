@@ -43,6 +43,10 @@ const StyledPage = styled.main<{ open: boolean }>`
       opacity: ${({ open }) => (open ? '0' : '1')};
       transition: 0.3s;
       transition-delay: 0.3s;
+
+      @media screen and (min-height: 870px) {
+        display: none;
+      }
     }
 
     button.menu {
