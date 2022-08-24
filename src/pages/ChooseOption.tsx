@@ -67,12 +67,12 @@ const StyledPage = styled.main<{ open: boolean }>`
     }
 
     &.categories {
-      height: ${({ open }) => (open ? '560px' : 'calc(100vh - 310px)')};
+      height: ${({ open }) => (open ? '570px' : 'calc(100vh - 310px)')};
       overflow-y: hidden;
     }
 
     @media screen and (min-height: 870px) {
-      height: 560px;
+      height: 570px;
     }
   }
 
