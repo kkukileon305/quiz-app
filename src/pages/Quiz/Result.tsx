@@ -10,10 +10,14 @@ const StyledPage = styled.main`
   h2 {
     font-size: 30px;
     font-weight: bold;
+
+    &.fail {
+      color: #d56262;
+    }
   }
+
   div.score {
     display: flex;
-    justify-content: space-between;
     margin-top: 60px;
   }
 
@@ -26,7 +30,6 @@ const StyledPage = styled.main`
 
       div.sum {
         display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
       }
 
@@ -81,7 +84,7 @@ const Result = ({ quizs, correctAns, userAns }: IResult) => {
     <StyledPage>
       <h2 onClick={() => console.log(score.current)}>Result</h2>
       <div className='score'>
-        <h2>Score</h2>{' '}
+        <h2>Score:&ensp;</h2>
         <h2>
           {score.current} / {quizs.length}
         </h2>
@@ -90,8 +93,8 @@ const Result = ({ quizs, correctAns, userAns }: IResult) => {
         {quizs.map((quiz, i) => (
           <li key={quiz.id}>
             <div className='sum'>
-              <h2>Q{i + 1}</h2>
-              <h2>{correctAns[i][0] === userAns[i][0] ? 'O' : 'X'}</h2>
+              <h2>Q{i + 1}.&ensp;</h2>
+              <h2 className={correctAns[i][0] === userAns[i][0] ? '' : 'fail'}>{correctAns[i][0] === userAns[i][0] ? 'O' : 'X'}</h2>
             </div>
 
             <div className='detail'>
