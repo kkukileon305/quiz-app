@@ -31,7 +31,7 @@ const useQuizFetch = () => {
       (async () => {
         setLoading(true);
         try {
-          const url = `https://the-trivia-api.com/api/questions?categories=${categorie.toLocaleLowerCase().replaceAll(' ', '_')}&limit=${limit}&difficulty=${difficulty.toLocaleLowerCase()}`;
+          const url = `https://the-trivia-api.com/api/questions?categories=${categorie.toLocaleLowerCase().replaceAll(' ', '_').replaceAll('&', 'and')}&limit=${limit}&difficulty=${difficulty.toLocaleLowerCase()}`;
           const { data } = await axios.get<Quiz[]>(url);
           setQuizs(data);
           setLoading(false);
